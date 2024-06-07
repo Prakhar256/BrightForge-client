@@ -9,7 +9,6 @@ import Heading from "../utils/Heading";
 import { styles } from "../styles/style";
 import CourseCard from "../components/Course/CourseCard";
 import Footer from "../components/Footer";
-import { Suspense } from "react"
 
 type Props = {};
 
@@ -44,8 +43,7 @@ const Page = (props: Props) => {
   const categories = categoriesData?.layout.categories;
 
   return (
-   <Suspense>
-     <div>
+    <div>
       {isLoading ? (
         <Loader />
       ) : (
@@ -111,7 +109,6 @@ const Page = (props: Props) => {
         </>
       )}
     </div>
-   </Suspense>
   );
 };
 
